@@ -3,6 +3,7 @@ import "./globals.css";
 import "@/style/tailwind/tailwind.theme.css"
 import { pretendard } from "@/style/font/font";
 import {Geist} from "next/font/google"
+import ReactQueryProvider from "@/provider/ReactQueryProvider";
 
 export const Metadata: Metadata = {
   title: "Next Project",
@@ -13,7 +14,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en" className={`${pretendard.variable}`}>
-      <body>{children}</body>
+      <body className="font-pretendard">
+        <ReactQueryProvider>
+        {children}
+        </ReactQueryProvider>
+        </body>
     </html>
   );
 }
