@@ -1,10 +1,12 @@
-import TodoQueryContainer from "./_component/TodoQueryContainer";
+export const instant = false
+
+import { Suspense } from "react";
+import TodoRead from "./_component/TodoRead";
 
 export default function page() {
     return (
-        <>
-            <h1>투두 목록</h1> {/* SSR */}
-            <TodoQueryContainer /> {/* CSR */}
-        </>
+        <Suspense fallback={<div>페이지 로딩중...</div>}>
+            <TodoRead />
+        </Suspense>
     );
 }
