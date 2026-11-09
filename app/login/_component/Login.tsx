@@ -3,6 +3,7 @@
 import { ApiResponseDTO } from "@/type/common/common.type";
 import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
+import { mus}
 
 interface FormValues {
     member_email: string;
@@ -42,6 +43,7 @@ export default function Login() {
         mutationFn: fetchLogin,
         onSuccess: (datas: ApiResponseDTO) => {
             alert(datas.message)
+            router.push("/")
         },
         onError: (err) => {
             console.error(err.message)
