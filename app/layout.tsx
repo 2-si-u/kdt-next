@@ -10,7 +10,7 @@ import ReactQueryProvider from "@/provider/ReactQueryProvider";
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
-  title: "Next Project",
+  title: "Shu Project",
   description: "재밌게 공부하는 Next 16!",
 }
 

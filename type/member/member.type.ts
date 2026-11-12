@@ -20,3 +20,9 @@ export interface JoinAdditionalRequestDTO {
     memberProvider: string;
     memberProviderId: string;
 }
+
+
+export interface ProfileUpdateRequestDTO{
+    id: number;
+    file: File;
+}
