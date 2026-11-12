@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Props란?
 // - 하나의 컴포넌트에서 다른 컴포넌트로 데이터를 전달할 때 사용합니다.
 // 부모 컴포넌트에서 자식 컴포넌트에게 값을 전달하고,
@@ -19,24 +18,4 @@ export default function Child({name, phone}: ChildProps) {
             <p>{phone}</p>
         </>
     );
-=======
-//Props란?
-//하나의 컴포넌트에서 다른 컴포넌트로 데이터를 전달할때 사용
-// 부모 컨포넌트에서 자식컴포넌트에게 값을 전달하고,
-// Props의 타입은 컴포넌트 위에 선언하는 것이 관례이다
-
-
-interface ChildProps {
-    name: string;
-    phone: string;
-
-}
-export default function page() {
-    return (
-        <>
-            자식컴포넌트
-            <Parent />
-        </>
-    )
->>>>>>> f770db0eeaec0c7fda1173d7f98cd949576338f6
 }

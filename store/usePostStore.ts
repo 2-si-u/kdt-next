@@ -8,11 +8,12 @@ const usePostStore = create(
         combine(
             {
                 post: null as null | Post,
+                posts: null as null | Post[],
                 selectedId: null as null | number
             },
             (set, get) => ({
-                setPost: (post: Post) => set({post: post}),
-                setPosts: (post: Post[] | null) => set({post: post})
+                setPost: (post: Post | undefined) => set({post: post}),
+                setPosts: (posts: Post[] | null) => set({posts: posts})
             })
         ),
         {

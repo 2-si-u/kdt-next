@@ -6,7 +6,7 @@ import { NextRequest } from "next/server";
 // CSR
 // cookie HttpOnly 옵션인 상태에서 접근이 불가능
 export function middleware(request: NextRequest) {
-    const refreshToken = request.cookies.get("refreshToken")
+    const refreshToken = request.cookies.get("refresh_token")
     const { pathname } = request.nextUrl;
 
     // [로그인 전용 경로 차단]
@@ -22,7 +22,7 @@ export function middleware(request: NextRequest) {
         pathname.startsWith("/login") || 
         pathname.startsWith("/join")
     )){
-        NextResponse.redirect(new URL("/", request.url)) 
+        return NextResponse.redirect(new URL("/", request.url)) 
     }
 
     return NextResponse.next()

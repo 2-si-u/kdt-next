@@ -1,7 +1,9 @@
+import Join from "./_component/Join";
+
 export default function page() {
     return (
         <>
-            Enter
+            <Join />
         </>
     );
 }

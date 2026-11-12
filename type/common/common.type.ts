@@ -1,5 +1,5 @@
-export interface ApiResponseDTO <T = any>{
+export interface ApiResponseDTO<T = any>{
     success: boolean;
     message: string;
-    data: T | null
+    data: T | null;
 }
